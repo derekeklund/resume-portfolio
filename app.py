@@ -15,7 +15,7 @@ def git_update():
 
 @app.route('/')
 def index():
-    return "Continuous deployment enabled :) It's working! Yayyyy"
+    return "Continuous deployment enabled :) It's working! Yayyyy. Test 1, 2, 3..."
 
 if __name__ == '__main__':
     app.run(debug=True) # This should be set to false in a production environment

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://codepen.io/Zamo-M/details/gOyjPGJ -->
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <title>Derek Eklund | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        
+        
+        <nav class="navbar">
+
+            <h2>Derek Eklund</h2>
+            
+            <ul class="navbar__ul">
+                <li class="navbar__li">
+                    <a href="{{ url_for('index') }}" class="nav-link">Projects</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="center">More coming soon!</h2>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html>

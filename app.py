@@ -13,9 +13,19 @@ def git_update():
     origin.pull()
     return "Updated PythonAnywhere successfully", 200
 
-@app.route('/')
+@app.route('/', methods=["GET", "POST"])
 def index():
-    return "Continuous deployment enabled :) It's working! Yayyyy. Test 1, 2, 3..."
+    return render_template('index.html')
+    # return "Continuous deployment enabled :) It's working! Yayyyy. Test 1, 2, 3..."
+
+@app.route('/about', methods=["GET", "POST"])
+def about():
+    return render_template('about.html')
+
+@app.route('/contact', methods=["GET", "POST"])
+def contact():
+    return render_template('contact.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True) # This should be set to false in a production environment

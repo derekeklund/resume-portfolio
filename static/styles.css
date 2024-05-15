@@ -29,6 +29,7 @@ header {
     list-style-type: none;
     width: 100%;
     max-width: 500px;
+    padding-left: 0;
 }
 
 .navbar__ul .name {

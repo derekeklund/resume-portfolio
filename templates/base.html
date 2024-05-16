@@ -14,19 +14,19 @@
 
 <body>
     <header>
-        
-        
         <nav class="navbar">
-
-            <h2>Derek Eklund</h2>
-            
+            <h2>Derek Eklund</h2>  
             <ul class="navbar__ul">
-                <li class="navbar__li">
-                    <a href="{{ url_for('index') }}" class="nav-link">Projects</a>
-                </li>
                 <li class="navbar__li">
                     <a href="{{ url_for('about') }}" class="nav-link">About</a>
                 </li>
+                <li class="navbar__li">
+                    <a href="{{ url_for('resume') }}" class="nav-link">Resume</a>
+                </li>
+                <li class="navbar__li">
+                    <a href="{{ url_for('index') }}" class="nav-link">Projects</a>
+                </li>
+                
                 <li class="navbar__li">
                     <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
                 </li>
@@ -34,7 +34,23 @@
         </nav>
     </header>
 
-    <h2 class="center">More coming soon!</h2>
+    <!-- About Me -->
+    <div class="about-me">
+        <div class="blurb">
+            <p>Welcome to my portfolio! I'm a Python Developer and Automation Specialist, currently working in the Biotechnology space--I tell the robots what to do to help expedite Vaccine Clinical Research trials.</p>
+
+            <p>Experienced in web-scraping with Selenium, data analysis with Pandas and NumPy, visualization with Matplotlib and Seaborn, and the Flask and Django frameworks. Interested in programming, finance, and science. Check out my projects!</p>
+        </div>
+        <div class="profile-pic">
+            <img src="{{ url_for('static', filename='profile-pic.jpg') }}" alt="Profile Picture">
+        </div>
+    </div>
+
+    <!-- Resume -->
+    <div class="resume">
+        <h2>Resume</h2>
+        <p>Download my resume <a href="{{ url_for('static', filename='Derek_Eklund_Resume.pdf') }}" target="_blank">here</a>.</p>
+    </div>
 
     {% block content %}
     {% endblock %}

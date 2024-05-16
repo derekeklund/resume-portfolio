@@ -26,6 +26,10 @@ def about():
 def contact():
     return render_template('contact.html')
 
+@app.route('/resume', methods=["GET", "POST"])
+def resume():
+    return render_template('resume.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True) # This should be set to false in a production environment

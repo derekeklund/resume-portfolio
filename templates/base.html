@@ -17,40 +17,101 @@
         <nav class="navbar">
             <h2>Derek Eklund</h2>  
             <ul class="navbar__ul">
-                <li class="navbar__li">
+                <!--<li class="navbar__li">
                     <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">About</a>
+                </li>-->
+                <li class="navbar__li">
+                    <!--<a href="{{ url_for('resume') }}" class="nav-link">Resume</a>-->
+                    <a href="#skills" class="nav-link">Skills</a>
                 </li>
                 <li class="navbar__li">
-                    <a href="{{ url_for('resume') }}" class="nav-link">Resume</a>
-                </li>
-                <li class="navbar__li">
-                    <a href="{{ url_for('index') }}" class="nav-link">Projects</a>
+                    <!--<a href="{{ url_for('index') }}" class="nav-link">Projects</a>-->
+                    <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 
                 <li class="navbar__li">
-                    <a href="{{ url_for('contact') }}" class="nav-link">Contact</a>
+                    <!--<a href="{{ url_for('contact') }}" class="nav-link">Contact</a>-->
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <!-- About Me -->
-    <div class="about-me">
+    <div class="about-me" id="about">
         <div class="blurb">
             <p>Welcome to my portfolio! I'm a Python Developer and Automation Specialist, currently working in the Biotechnology space--I tell the robots what to do to help expedite Vaccine Clinical Research trials.</p>
 
             <p>Experienced in web-scraping with Selenium, data analysis with Pandas and NumPy, visualization with Matplotlib and Seaborn, and the Flask and Django frameworks. Interested in programming, finance, and science. Check out my projects!</p>
+
+            <p>Download my resume <a href="{{ url_for('static', filename='Resume - Derek Eklund.pdf') }}" download="Resume - Derek Eklund">here</a>.</p>
         </div>
         <div class="profile-pic">
             <img src="{{ url_for('static', filename='profile-pic.jpg') }}" alt="Profile Picture">
         </div>
     </div>
 
-    <!-- Resume -->
-    <div class="resume">
-        <h2>Resume</h2>
-        <p>Download my resume <a href="{{ url_for('static', filename='Derek_Eklund_Resume.pdf') }}" target="_blank">here</a>.</p>
-    </div>
+    <!-- Skills -->
+    <section class='skills' id='skills'>
+      <h2>Skills</h2>
+      <article class="skills-container">
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='python.svg') }}" alt="Python">
+          <p>Python</p>
+        </div>
+
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='sql.svg') }}" alt="SQL">
+          <p>SQL</p>
+        </div>
+
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='html.svg') }}" alt="HTML5">
+          <p>HTML5</p>
+        </div>
+
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='css.svg') }}" alt="CSS">
+          <p>CSS</p>
+        </div>
+          
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='github.svg') }}" alt="GitHub">
+          <p>GitHub</p>
+        </div>
+
+        <div class="skills__item" data-aos='fade-up'>
+          <img src="{{ url_for('static', filename='django.svg') }}" alt="Django">
+          <p>Django</p>
+        </div>
+
+       
+     </article>
+    </section>
+
+    <!-- Contact -->
+    <footer>
+      <div class="wrapper">
+        <div class="footer__text-container" id='contact'>
+          <h2>Contact</h2>
+          <p>Let's connect if you want to collaborate...</p>
+        </div>
+        <div class="footer__text-container1">
+          <p><span class='phone'>Phone</span> <strong>571-438-0238</strong></p>
+          <p><span class='email'>Email</span> <strong>derekeklund32@gmail.com</strong></p>
+        </div>
+      </div>
+      <hr class='footer__nav-hr'>
+      <nav class="footer__nav">
+        <h3>Derek</h3>
+        <ul class='footer__nav-links'>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+        </ul>
+        <p class='to-top'><a href="#top"><strong>BACK TO TOP</strong></a></p>
+      </nav>
+    </footer>
 
     {% block content %}
     {% endblock %}

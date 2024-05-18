@@ -1,7 +1,6 @@
 :root {
   --main-colour: #25c8b1;
   --secondary-colour: #2c75bc;
-
   --hue: 0;
   --sat: 0%;
   --title-color: hsl(var(--hue),var(--sat),20%);
@@ -17,8 +16,6 @@
 
 body {
   background-color: var(--body-color);
-  /* background-color: #F7F4F4; */
-  /* font-family: Lato, "sans-serif"; */
   font-family: var(--body-font);
   padding: 5%;
   margin: auto;
@@ -100,7 +97,6 @@ h2 {
 
   .center {
     text-align: center;
-    /* margin: 0 auto; */
   }
 }
 
@@ -118,7 +114,6 @@ h2 {
   .navbar {
     width: 100%;
     display: flex;
-    /* padding-bottom: 40px; */
   }
 
   .navbar ul {
@@ -150,56 +145,20 @@ h2 {
 
 .blurb {
   color: var(--text-color);
-  /* font-size: var(--normal-font-size); */
-  /* font-size: large; */
   max-width: 500px;
   text-align: justify;
 }
 
 .blurb p {
-  /* font-style: italic; */
   margin-bottom: 2rem;
   font-size: large;
 }
 
 .profile-pic img {
   width: 75%;
-  /* height: 75%; */
   border-radius: 50%;
   margin: auto 10%;
 }
-
-/* .about-me-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.blurb {
-  color: var(--text-color);
-  font-size: large;
-  max-width: 500px;
-  text-align: justify;
-}
-
-.blurb p {
-  font-style: italic;
-  margin-bottom: 2rem;
-}
-
-.profile-pic {
-  width: 40%;
-  text-align: center;
-}
-
-.profile-pic img {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  margin: 10% 10% 25% 10%;
-} */
 
 .button {
   border-radius: 1rem;
@@ -218,7 +177,6 @@ h2 {
 .projects-container {
   max-width: 968px;
   margin: auto;
-  /* text-transform: uppercase; */
   text-align: center;
   padding: 5%;
 }
@@ -230,7 +188,6 @@ h2 {
 }
 
 .card {
-  /* border: 1px solid rgba(0, 0, 0, .1); */
   background-color: #fff;
   box-shadow: 2.4px 2.4px 3.6px rgba(0, 0, 0, .15);
   padding: 1.25rem;
@@ -251,15 +208,11 @@ h2 {
 }
 
 /* ------ Skills ------ */
+
 .skills {
   text-align: center;
   margin-top: 2rem;
 }
-
-/* .skills h2 {
-  font-family: var(--font-main);
-  text-transform: uppercase;
-} */
 
 .skills-container {
   display: grid;
@@ -286,16 +239,14 @@ h2 {
   margin-bottom: -5px;
 }
 
-/* ------ Footer ------ */
+/* ------ Contact/Footer ------ */
 
 footer {
-  /* font-family: var(--font-main); */
   display: flex;
   flex-direction: column;
   text-align: center;
   width: 80%;
   margin: auto;
-  /* background-color: var(--clr-background); */
 }
 
 .footer-container {
@@ -311,11 +262,6 @@ footer {
   text-align: center;
   justify-content: space-between;
 }
-
-/* footer h2 {
-  text-transform: uppercase;
-  margin-top: 2rem;
-} */
 
 .footer__nav-links {
   display: none;
@@ -340,7 +286,6 @@ footer p {
 
 .to-top {
   list-style-type: none;
-  /* margin-right: 10px; */
   justify-self: flex-end;
   text-transform: uppercase;
 }
